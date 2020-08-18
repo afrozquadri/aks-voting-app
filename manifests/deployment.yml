@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "akscluster-54b1"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "akscluster-54b1"
+    spec:
+      containers:
+        - name: "akscluster-54b1"
+          image: "afrozvotingapp.azurecr.io/akscluster"
+          ports:
+          - containerPort: 8080
